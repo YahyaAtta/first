@@ -1,3 +1,5 @@
+// Old Code
+/*
 void main() {
     String text = "A//B//C" ; 
     String result = "" ; 
@@ -13,4 +15,28 @@ void main() {
   }
   print(result) ;  
 } 
-
+*/
+List<string> splitString(String line , String spereator="//")
+{
+  String sWord;
+  int pos = 0 ;
+    List<String> listOfString = [];
+    while((pos = line.indexof(Spereator))!=-1)
+    {
+     sWord = Line.substr(0,pos) ; 
+        if(sWord!="")
+        {
+       listOfString.add(sWord);
+        }
+    line.replaceRange(0,pos + sperator.length,'');
+    }
+    if(line!="")
+    {
+      listOfString.add(line) ;
+    }
+    return listOfString;
+}
+void main() {
+String Line = "A//B//C" ; 
+print(splitString(Line));
+}
